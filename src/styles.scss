@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import 'themes/my-theme.scss';
+
+@include mat-core();
+
+/* ======== Angular material custom themes ======== */
+
+$my-custom-primary: mat-palette($custom-app-primary);
+$my-custom-accent: mat-palette($custom-app-accent, 100, 500, A100);
+$my-custom-warn: mat-palette($custom-app-warn);
+
+$my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
+
+@include angular-material-theme($my-custom-theme);
+
